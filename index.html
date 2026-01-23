@@ -49,10 +49,45 @@
   </head>
 
   <body onload="init()" class="bg-dark text-light">
+    <div class="rotateMessage">
+      <img
+        id="turnPhone"
+        class="rotateMessageImg"
+        src="img/7cbf63690d0116ab4fb85d550da0bc55.jpg"
+        alt=""
+      />
+
+      <div class="phoneRotation">
         <h1 class="text-center mb-3">El pollo loco</h1>
 
         <div id="fullscreen" class="game-shell">
           <canvas id="canvas" width="760" height="480"></canvas>
-        </div>            
-    </body>
+
+          <div class="fullscreen">
+            <button
+              class="btn btn-sm btn-dark border border-secondary"
+              onclick="mute()"
+              type="button"
+            >
+              <img src="img/music.png" alt="" width="18" height="18" />
+            </button>
+
+            <button
+              class="btn btn-sm btn-dark border border-secondary"
+              onclick="fullscreen()"
+              type="button"
+            >
+              <img src="img/fullscreen.png" alt="" width="18" height="18" />
+            </button>
+          </div>
+        </div>
+
+        <div
+          onclick="toggleDnone('howPlay')"
+          id="howPlay"
+          class="howPlay d-none"
+        ></div>
+      </div>
+    </div>
+  </body>
 </html>

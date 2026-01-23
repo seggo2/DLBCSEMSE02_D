@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+  background-color: orange;
+  font-family: Rubik Scribble;
+  background-image: url(img/2ebh_229x_210319.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+canvas {
+  background-color: black;
+}
+
+.fullscreen img {
+  height: 25px;
+  cursor: pointer;
+}
+
+.startScreenImage {
+  width: 720px;
+  height: 100%;
+}
+
+.fullscreen {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  right: 5px;
+  bottom: 5px;
+}
+
+#fullscreen {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.howPlay img {
+  padding-top: 20px;
+  width: 200px;
+}
+
+.howPlay {
+  width: 500px;
+  background-color: orange;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.information {
+  width: 40px;
+  position: absolute;
+  top: 5%;
+  right: 60%;
+}
+
+.information:hover {
+  cursor: pointer;
+  border: 1px solid wheat;
+  border-radius: 10px;
+}
+
+.controller {
+  position: absolute;
+  width: 40px;
+  top: 5%;
+  right: 40%;
+}
+
+.controller:hover {
+  cursor: pointer;
+  border: 1px solid wheat;
+  border-radius: 10px;
+}
+
+.music {
+  position: absolute;
+  width: 40px;
+  top: 5%;
+  right: 20%;
+}
+
+.music:hover {
+  cursor: pointer;
+  border: 1px solid wheat;
+  border-radius: 10px;
+}
+
+.startScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.inforStart {
+  text-align: center;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-family: roboto;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.buttonPlay {
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  width: 120px;
+  height: 50px;
+  background-color: orangered;
+  color: wheat;
+  font-size: 30px;
+  font-family: roboto;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.buttonPlay:hover {
+  cursor: pointer;
+  background-color: gold;
+  color: red;
+}
+
+.fullScreenStart {
+  width: 40px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+canvas {
+  background-color: black;
+  display: block;
+}
+
+.positionSmartphone img {
+  width: 15px;
+}
+
+.positionSmartphone {
+  position: absolute;
+  top: 87%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+}
+
+.leftRight {
+  display: flex;
+  gap: 40px;
+}
+
+.leftRight img {
+  border: 4px solid white;
+  background-color: orange;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.jumpThrow {
+  display: flex;
+  gap: 40px;
+}
+
+.jumpThrow img {
+  border: 4px solid white;
+  background-color: orange;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.phoneRotation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.rotateMessageImg {
+  visibility: hidden;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+@media only screen and (max-width: 760px) {
+  canvas {
+    width: 100%;
+  }
+
+  .positionSmartphone {
+    visibility: visible;
+  }
+
+  .fullscreen {
+    position: absolute;
+    top: 10px !important;
+    right: 10px !important;
+  }
+
+  .rotateMessageImg {
+    visibility: visible;
+  }
+
+  .phoneRotation {
+    width: 100%;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .startScreenImage {
+    width: 100%;
+  }
+
+  .inforStart {
+    font-size: 15px;
+  }
+
+  .howPlay {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    font-size: 15px;
+  }
+
+  .howPlay img {
+    height: 50px;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-height: 490px) {
+  h1 {
+    display: none;
+  }
+
+  .rotateMessageImg {
+    visibility: hidden;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+  }
+
+  .howPlay {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    font-size: 15px;
+  }
+
+  .positionSmartphone {
+    visibility: visible;
+  }
+
+  canvas {
+    height: 100%;
+  }
+
+  #fullscreen {
+    height: 100%;
+  }
+
+  .phoneRotation {
+    height: 100vh;
+  }
+  /* Bootstrap-friendly shell um das Canvas */
+  .game-shell {
+    position: relative;
+    display: inline-block;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  /* Buttons oben rechts, wie dein altes Icon-Overlay */
+  .fullscreen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  /* Canvas clean */
+  #canvas {
+    display: block;
+    background: #000;
+  }
+}
