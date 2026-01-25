@@ -79,8 +79,7 @@ class MovableObject extends drawableobject {
      * @param {string} images 
      */
     playAnimation(images) {
-        let i = this.currentimage % images.length;// das % wird modulu genannt welches dafür sorgt das wen das bild 5 erreicht hat -
-        /////////////////////////////////////////////////////////wieder auf 0 springt es ist eine mathematische formel
+        let i = this.currentimage % images.length;
         let path = images[i];
         this.img = this.imagecache[path];
         this.currentimage++;
